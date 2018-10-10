@@ -7,7 +7,8 @@ public class Customer {
 	
 	@Id
 	private int customerId;
-	private String customerName;
+	private String customerFirstName;
+	private String customerLastName;
 	private String customerEmail;
 	private String customerAddress;
 	private String customerPassword;
@@ -16,11 +17,12 @@ public class Customer {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Customer(int customerId, String customerName, String customerEmail, String customerAddress,
-			String customerPassword, Address address) {
+	public Customer(int customerId, String customerFirstName, String customerLastName, String customerEmail,
+			String customerAddress, String customerPassword, Address address) {
 		super();
 		this.customerId = customerId;
-		this.customerName = customerName;
+		this.customerFirstName = customerFirstName;
+		this.customerLastName = customerLastName;
 		this.customerEmail = customerEmail;
 		this.customerAddress = customerAddress;
 		this.customerPassword = customerPassword;
@@ -32,11 +34,17 @@ public class Customer {
 	public void setCustomerId(int customerId) {
 		this.customerId = customerId;
 	}
-	public String getCustomerName() {
-		return customerName;
+	public String getCustomerFirstName() {
+		return customerFirstName;
 	}
-	public void setCustomerName(String customerName) {
-		this.customerName = customerName;
+	public void setCustomerFirstName(String customerFirstName) {
+		this.customerFirstName = customerFirstName;
+	}
+	public String getCustomerLastName() {
+		return customerLastName;
+	}
+	public void setCustomerLastName(String customerLastName) {
+		this.customerLastName = customerLastName;
 	}
 	public String getCustomerEmail() {
 		return customerEmail;
@@ -64,8 +72,9 @@ public class Customer {
 	}
 	@Override
 	public String toString() {
-		return "Customer [customerId=" + customerId + ", customerName=" + customerName + ", customerEmail="
-				+ customerEmail + ", customerAddress=" + customerAddress + ", customerPassword=" + customerPassword
-				+ ", address=" + address + "]";
+		return "Customer [customerId=" + customerId + ", customerFirstName=" + customerFirstName + ", customerLastName="
+				+ customerLastName + ", customerEmail=" + customerEmail + ", customerAddress=" + customerAddress
+				+ ", customerPassword=" + customerPassword + ", address=" + address + "]";
 	}
+	
 }
